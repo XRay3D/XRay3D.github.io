@@ -24,7 +24,7 @@ $(function() {
       spaceBetweenSlides: 30
     }
   }
-     })
+     
    });
 
 $(".alert").click(function () {
