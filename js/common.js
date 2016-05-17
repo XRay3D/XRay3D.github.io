@@ -7,10 +7,13 @@ $(function() {
        // Optional parameters
        direction: 'horizontal',
        loop: true,
-			 slidesPerView: 3
+			 slidesPerView: 2
      })
    });
 
+$(".alert").click(function () {
+	alert("ddwd");
+});
 
 
 
