@@ -7,8 +7,10 @@ $(function() {
        // Optional parameters
        direction: 'horizontal',
        loop: true,
+			 slidesPerView: 4,
 			 breakpoints: {
     // when window width is <= 320px
+
     320: {
       slidesPerView: 1,
       spaceBetweenSlides: 10
@@ -21,10 +23,10 @@ $(function() {
     // when window width is <= 640px
     640: {
       slidesPerView: 3,
-      spaceBetweenSlides: 30
+      spaceBetweenSlides: 30,
     }
-  }
-     
+  },
+});
    });
 
 $(".alert").click(function () {
