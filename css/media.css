@@ -1,45 +1,201 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-
+@media only screen and (max-width : 1600px) {
+	.main_header {
+    margin: 40px 100px;
+}
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 1000px) {
+	.portfolio-container li {
+		width: 33.3333%;
+	}
+	.portfolio-container li:nth-child(7), 
+	.portfolio-container li:nth-child(8),
+	.portfolio-container li:nth-child(9),
+	.portfolio-container li:nth-child(10){
+		display: none;
+	}
+}
 
+@media only screen and (max-width : 900px) {
+	.main_header {
+    margin: 40px 40px;
+}
+.main_menu li {
+    margin-right: 30px;
+}
+.main_menu li a{
+   font-size: 18px;
+}
+.about_wrapper h1 {
+    font-size: 50px;
+    line-height: 65px;
+    margin: 0;
+		padding-top: 50px;
+}
+.about_wrapper h1 span {
+    margin-right: 0px;
+}
+.about_wrapper {
+    width: 99%;
+    padding: 0 50px;
+}
+.form h2{
+	font-size: 35px;
+}
+.list-service li h4 {
+	font-size: 22px;
+}
+.list-service li span {
+    font-size: 16px;
+}
+.list-service li .price {
+	font-size: 26px;
+}
+.list-service li .description-item {
+	font-size: 15px;
+	padding: 10px 0;
+}
+.input-item input {
+    height: 45px;
+}
+.input-wrap {
+    width: 90%;
+    margin: 0 auto 30px;
+}
+.checbox-item label {
+	font-size: 16px;
+}
+.list-service {
+    margin: 40px auto 0;
+    width: 90%;
+}
+.checbox-wrap {
+	width: 90%;
+}
+.form-button{
+	font-size: 15px;
+}
+.main_footer h4 {
+	font-size: 35px;
+}
+.footer_content .footer_item > p {
+	font-size: 26px;
+}
+.footer_item ul li a p {
+	font-size: 14px;
+}
+.sub-footer {
+    padding: 30px 40px;
+    width: 100%;
+    margin: auto;
+}
+.form {
+    width: 100%;
+}
+.list-service {
+	flex-wrap: wrap;
+}
+.list-service li {
+    width: 50%;
+		padding: 0 20px
+}
+.checbox-item label {
+    font-size: 15px;
+}
+.form p {
+	padding: 0px 20px;
+}
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 703px) {
 	
-	/*Disable Animation on Mobile Devices*/
-	.animated {
-		/*CSS transitions*/
-		-o-transition-property: none !important;
-		-moz-transition-property: none !important;
-		-ms-transition-property: none !important;
-		-webkit-transition-property: none !important;
-		transition-property: none !important;
-		/*CSS transforms*/
-		-o-transform: none !important;
-		-moz-transform: none !important;
-		-ms-transform: none !important;
-		-webkit-transform: none !important;
-		transform: none !important;
-		/*CSS animations*/
-		-webkit-animation: none !important;
-		-moz-animation: none !important;
-		-o-animation: none !important;
-		-ms-animation: none !important;
-		animation: none !important;
-	}
-
+.main_menu li a {
+    font-size: 15px;
+}
+.main_menu ul {
+    text-align: left;
+    padding-top: 20px;
+}
+.main_menu {
+	float: none;
+}
+.about_wrapper h1 {
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0;
+		padding-top: 50px;
+		padding-bottom: 50px;
+}
+.about_wrapper h1 span {
+	line-height: 22px;
+}
+.main_footer h4 {
+	font-size: 28px;
+	margin-bottom: 0;
+}
+.footer_content .footer_item > p {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.footer_content {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.footer_item {
+	width: 100%;
+}
+.portfolio-container li {
+    width: 50%;
+}
+.port-item, .port-item > div {
+	height: 200px;
+}
+.list-service li {
+	padding: 0 30%;
+	width: 100%;
+}
+.list-service {
+	width: 100%;
+}
+.checbox-item {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.checbox-wrap {
+    width: 100%;
+		display: block;
+		text-align: left;
+		padding-left: 33px;
+}
+.input-item {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.input-wrap {
+    width: 100%;
+		display: block;
+		}
+		.footer_content li {
+    margin-right: 28px;
+}
+.main_header {
+    margin: 40px 25px;
+}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+.main_menu li {
+	margin-right: 10px;
+}
 }
 
 /* Custom, iPhone Retina */
