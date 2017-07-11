@@ -147,6 +147,7 @@ body {
  height: 343px;
  width: 100%;
  transition: .25s ease all;
+ cursor: pointer;
 }
 .port-item:hover > div {
 	transition: .25s ease all;
@@ -369,5 +370,39 @@ body {
   text-align: center;
 }
 .mfp-close-btn-in .mfp-close {
-    color: #333333;
+    background-image: url(../img/close.png);
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+		right: 30px;
+		cursor: pointer;
+}
+.mfp-bg.mfp-ready{
+    background: #f3f3f3;
+    opacity: 1; 
+}
+.popup-count {
+	font-size: 16px;
+	font-family: "RobotoLight", sans-serif;
+	color: #727272;
+	padding-top: 20px;
+}
+.mfp-arrow::before, .mfp-arrow::after{
+	display: none;
+}
+.mfp-arrow.mfp-arrow-left {
+	background-image: url('../img/prev.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 55px;
+	height: 55px;
+	left: 35px;
+}
+.mfp-arrow.mfp-arrow-right{
+	background-image: url('../img/next.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 55px;
+	height: 55px;
+	right: 20px;
 }

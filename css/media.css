@@ -189,12 +189,24 @@
 .main_header {
     margin: 40px 25px;
 }
+.popup-count {
+	padding-top: 0px;
+}
+.mfp-close-btn-in .mfp-close{
+	width: 20px;
+	height: 20px;
+	right: 10px;
+	top: 5px;
+}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 .main_menu li {
 	margin-right: 10px;
+}
+.mfp-arrow.mfp-arrow-left, .mfp-arrow.mfp-arrow-right {
+	display: none;
 }
 }
 

@@ -40,7 +40,15 @@ $(function() {
 
 	var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 	var firstOpen = true;
-
+	var currentPopup = 1;
+	var allCountOfPopup = 0;
+	$(".port-item").each(function(i, el ){
+		$(this).attr('position', i);
+		if($(this).is(':visible')) 	allCountOfPopup = allCountOfPopup + 1;
+	});
+	$(".port-item").click(function(){
+		currentPopup = +$(this).attr('position');
+	});
 function handleComplete() {
 	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
 	exportRoot = new lib._300x500_html();
@@ -131,19 +139,21 @@ $('.port-item').magnificPopup({
   key: 'my-popup', 
   items: data,
   type: 'inline',
+	closeOnBgClick: false,
   inline: {
     // Define markup. Class names should match key names.
-    markup: '<div class="white-popup"><div class="mfp-close"></div>'+
+    markup: '<div class="mfp-close"></div>' + '<div class="white-popup">'  + 
 		'<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:300px; height:500px; margin: auto">' +
 		'<canvas id="canvas" width="300" height="500" style="position: absolute; right: 0; left: 0; margin: auto; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>' +
 		'<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:300px; height:500px; position: absolute; left: 0px; rigth: 0; margin: auto; top: 0px; display: block;">' +
 		'</div>' +
 	'</div>' +
-              '<div class="mfp-count"></div>'+
+              '<div class="popup-count">'+'<span class="mfp-count"></span>'+'/'+allCountOfPopup+'</div>'+ 
             '</div>'
   },
+	closeMarkup: '<div class="mfp-close"></div>' ,
   gallery: {
-    enabled: true 
+    enabled: true,
   },
   callbacks: {
     open: function() {
@@ -154,7 +164,8 @@ $('.port-item').magnificPopup({
       init();
     },
 	 updateStatus: function(data) {
-		 if (firstOpen) return true;
+	
+		 if (firstOpen) return true; 
       init();
 	 },
 	 close: function() {
@@ -162,7 +173,14 @@ $('.port-item').magnificPopup({
 	 }
   }
 });
-
+$('.port-item').on('mfpOpen', function(e /*, params */) {
+  $.magnificPopup.instance.goTo(currentPopup);
+	if( $(document).width() <= 480 ) {
+		$(".mfp-content").click( function () {
+			$.magnificPopup.instance.next()
+		})
+	}
+});
 });
 
 $(window).load(function() {
