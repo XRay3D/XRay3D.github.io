@@ -42,9 +42,13 @@ $(function() {
 	var firstOpen = true;
 	var currentPopup = 1;
 	var allCountOfPopup = 0;
+	var dataForPopup = [];
 	$(".port-item").each(function(i, el ){
 		$(this).attr('position', i);
-		if($(this).is(':visible')) 	allCountOfPopup = allCountOfPopup + 1;
+		if($(this).is(':visible')) {
+			dataForPopup.push({count: i + 1});
+			allCountOfPopup = allCountOfPopup + 1;
+		}	
 	});
 	$(".port-item").click(function(){
 		currentPopup = +$(this).attr('position');
@@ -96,40 +100,7 @@ function handleComplete() {
 	fnStartAnimation();
 }
 
-var data = [
-  {
-    count: 1,
-  },
-  
-  {
-    count: 2,
-  },
-  
-  {
-    count: 3
-  },
-    {
-    count: 4
-  },
-    {
-    count: 5
-  },
-    {
-    count: 6
-  },
-    {
-    count: 7
-  },
-    {
-    count: 8
-  },
-    {
-    count: 9
-  },
-    {
-    count: 10
-  },
-];
+
 function init() {
 	createjs.MotionGuidePlugin.install();
 	handleComplete();
@@ -137,7 +108,7 @@ function init() {
 // initalize popup
 $('.port-item').magnificPopup({ 
   key: 'my-popup', 
-  items: data,
+  items: dataForPopup,
   type: 'inline',
 	closeOnBgClick: false,
   inline: {
