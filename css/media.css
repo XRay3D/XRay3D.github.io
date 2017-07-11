@@ -5,6 +5,14 @@
 	.main_header {
     margin: 40px 100px;
 }
+.port-item > div, .port-item {
+	height: 250px;
+}
+}
+@media only screen and (max-width : 1200px) {
+.port-item > div, .port-item {
+	height: 200px;
+}
 }
 
 /* Medium Devices, Desktops */
@@ -18,6 +26,9 @@
 	.portfolio-container li:nth-child(10){
 		display: none;
 	}
+	.port-item > div, .port-item {
+	height: 300px;
+}
 }
 
 @media only screen and (max-width : 900px) {
@@ -36,12 +47,12 @@
     margin: 0;
 		padding-top: 50px;
 }
-.about_wrapper h1 span {
+.about_wrapper h1 a {
     margin-right: 0px;
 }
 .about_wrapper {
-    width: 99%;
-    padding: 0 50px;
+	width: 100%;
+    padding: 0 10px;
 }
 .form h2{
 	font-size: 35px;
@@ -96,13 +107,7 @@
 .form {
     width: 100%;
 }
-.list-service {
-	flex-wrap: wrap;
-}
-.list-service li {
-    width: 50%;
-		padding: 0 20px
-}
+
 .checbox-item label {
     font-size: 15px;
 }
@@ -110,7 +115,11 @@
 	padding: 0px 20px;
 }
 }
-
+@media only screen and (max-width : 800px) {
+.port-item > div, .port-item {
+	height: 250px;
+}
+}
 /* Small Devices, Tablets */
 @media only screen and (max-width : 703px) {
 	
@@ -131,8 +140,8 @@
 		padding-top: 50px;
 		padding-bottom: 50px;
 }
-.about_wrapper h1 span {
-	line-height: 22px;
+.about_wrapper h1 a {
+	line-height: 90px;
 }
 .main_footer h4 {
 	font-size: 28px;
@@ -155,11 +164,15 @@
     width: 50%;
 }
 .port-item, .port-item > div {
-	height: 200px;
+	height: 300px;
 }
 .list-service li {
 	padding: 0 30%;
 	width: 100%;
+	margin-bottom: 38px;
+}
+.list-service {
+	flex-wrap: wrap;
 }
 .list-service {
 	width: 100%;
@@ -198,6 +211,18 @@
 	right: 10px;
 	top: 5px;
 }
+.footer_item ul li:first-child a img {
+	width: 45px;
+	height: 48px;
+}
+.footer_item ul li:nth-child(2) a img {
+	width: 56px;
+    height: 54px;
+}
+.footer_item ul li:nth-child(3) a img {
+	width: 48px;
+    height: 48px;
+}
 }
 
 /* Extra Small Devices, Phones */
@@ -208,8 +233,16 @@
 .mfp-arrow.mfp-arrow-left, .mfp-arrow.mfp-arrow-right {
 	display: none;
 }
+.port-item, .port-item > div {
+	height: 200px;
 }
+}
+@media only screen and (max-width : 400px) {
 
+.port-item, .port-item > div {
+	height: 150px;
+}
+}
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
 

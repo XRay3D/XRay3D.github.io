@@ -1,5 +1,18 @@
 $(function() {
+	$(".about_wrapper").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
 
+    });
+$(".main_menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top + 300;
+        $('body,html').animate({scrollTop: top}, 1000);
+
+    });
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {

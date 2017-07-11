@@ -87,6 +87,13 @@ body {
 	color: #212121;
 	line-height: 30px;
 }
+.main_menu a:hover{
+ color: #001be3;
+ transition: all .25s ease;
+}
+.main_menu a:focus {
+	 color: #001be3;
+}
 .about_wrapper {
 	width: 768px;
 	margin: auto;
@@ -104,10 +111,11 @@ body {
 	line-height: 1.2;
 	text-align: center;
 }
-.about_wrapper h1 span{
+.about_wrapper h1 a{
 	margin-right: 20px;
 	text-transform: uppercase;
 	line-height: 140px;
+	text-decoration: none;
 }
 .about_wrapper h1 span i{
 	color: #010101;
@@ -115,16 +123,16 @@ body {
 .about_wrapper h1 span:last-child{
 	margin-right: 0;
 }
-.title_blue{
+.title_blue, .title_blue:hover,  .title_blue:focus{
 	color: #001be3;
 }
-.title_bluelight{
+.title_bluelight, .title_bluelight:hover,  .title_bluelight:focus{
 	color: #03a9df;
 }
-.title_green{
+.title_green, .title_green:hover,  .title_green:focus{
 	color: #01ed86;
 }
-.title_greenlight{
+.title_greenlight, .title_greenlight:hover,  .title_greenlight:focus{
 	color: #7be400;
 }
 .portfolio-container {
@@ -233,12 +241,21 @@ body {
 	width: 100%;
 	display: block;
 	height: 49px;
-	color: #a7a7a7;
+	color: #000;
 	border: 1px solid #c4c4c4;
 	padding-left: 16px;
 	font-size: 17px;
 	font-family: "RobotoLight", sans-serif;
 	outline: 0;
+	transition: all .25s ease;
+}
+.input-item input:hover {
+	border: 1px solid #979797;
+	transition: all .25s ease;
+}
+.input-item input:focus {
+	border: 2px solid #979797;
+	transition: all .25s ease;
 }
 .input-item input::-webkit-input-placeholder {color:#c4c4c4;}
 .input-item input::-moz-placeholder          {color:#c4c4c4;}/* Firefox 19+ */
@@ -351,7 +368,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;;
 }
-.checbox-item input:checked + label:before {
+.checbox-item input:checked + label:before, .checbox-item input:hover + label:before {
   content: '';
   position: absolute;
   left: 0;
@@ -360,7 +377,7 @@ body {
   height: 32px;
   background-image: url(../img/chekboxActive.png);
   background-repeat: no-repeat;
-  background-position: center;;
+  background-position: center;
 }
 .white-popup {
   position: relative;
