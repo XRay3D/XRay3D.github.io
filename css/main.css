@@ -72,6 +72,7 @@ body {
 
 .main_menu{
 	float: right;
+	padding-top: 9px;
 }
 .main_menu ul {
 	text-align: center;
@@ -390,12 +391,25 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-.white-popup {
-  position: relative;
-  padding: 20px;
-  width: auto;
-  margin: 20px auto;
-  text-align: center;
+.white-popup { 
+position: absolute; 
+padding: 20px; 
+width: auto; 
+margin: 20px auto; 
+text-align: center; 
+right: 0; 
+left: 0; 
+top: 50%; 
+transform: translateY(-50%); 
+}
+.mfp-content { 
+position: relative; 
+display: inline-block; 
+vertical-align: middle; 
+margin: 0 auto; 
+text-align: left; 
+z-index: 1045; 
+height: 100%; 
 }
 .mfp-close-btn-in .mfp-close {
     background-image: url(../img/close.png);
@@ -403,7 +417,12 @@ body {
     width: 30px;
     height: 30px;
 		right: 30px;
+		top: 30px;
 		cursor: pointer;
+}
+.mfp-close-btn-in .mfp-close:hover {
+    background-image: url(../img/close-hover.png);
+		transition: all .25s ease;
 }
 .mfp-bg.mfp-ready{
     background: #f3f3f3;
@@ -426,6 +445,10 @@ body {
 	height: 55px;
 	left: 35px;
 }
+.mfp-arrow.mfp-arrow-left:hover{
+	background-image: url('../img/prev-hover.png');
+}
+
 .mfp-arrow.mfp-arrow-right{
 	background-image: url('../img/next.png');
 	background-repeat: no-repeat;
@@ -433,4 +456,14 @@ body {
 	width: 55px;
 	height: 55px;
 	right: 20px;
+}
+.mfp-arrow.mfp-arrow-right:hover{
+	background-image: url('../img/prev-hover.png');
+	transform: rotate(180deg)
+}
+.logo-text{
+	font-size: 32px;
+	color: #212121;
+	font-family: "RobotoBlack", sans-serif;
+	display: inline-block;
 }
