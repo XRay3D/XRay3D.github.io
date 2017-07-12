@@ -419,6 +419,7 @@ height: 100%;
 		right: 30px;
 		top: 30px;
 		cursor: pointer;
+		z-index: 9999;
 }
 .mfp-close-btn-in .mfp-close:hover {
     background-image: url(../img/close-hover.png);

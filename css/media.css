@@ -114,6 +114,11 @@
 .form p {
 	padding: 0px 20px;
 }
+.mfp-arrow.mfp-arrow-right:hover {
+    background-image: url(../img/prev-hover.png);
+    transform: rotate(180deg) scale(0.75);
+    right: 61px;
+}
 }
 @media only screen and (max-width : 800px) {
 .port-item > div, .port-item {
